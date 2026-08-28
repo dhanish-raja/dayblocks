@@ -8,7 +8,6 @@ import {
 } from '../validators/schemas.js';
 import { notFound, badRequest, conflict } from '../middleware/errorHandler.js';
 import { generateTimeline } from '../services/timelineGenerator.js';
-import { BlockType, ConfigMode } from '@prisma/client';
 
 function parseDateParam(dateStr: string): Date {
   const d = new Date(dateStr + 'T00:00:00.000Z');

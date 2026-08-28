@@ -7,7 +7,6 @@ import {
 } from '../validators/schemas.js';
 import { notFound, conflict } from '../middleware/errorHandler.js';
 import { generateTimeline } from '../services/timelineGenerator.js';
-import { BlockType, ConfigMode } from '@prisma/client';
 
 async function requireTemplateOwnership(templateId: string, userId: string) {
   const template = await prisma.template.findUnique({ where: { id: templateId } });
